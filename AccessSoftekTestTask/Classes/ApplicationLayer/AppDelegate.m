@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDependencies.h"
-#import "RSSFeedRouter.h"
+#import "RSSRouter.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +24,8 @@
     self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
     self.appDependencies = [[AppDependencies new] autorelease];
     [self.appDependencies configureWithWindow:self.window];
-    [self.appDependencies.feedRouter presentRSSFeed];
+    [self.appDependencies.rssRouter presentRSSFeed];
+    
     return YES;
 }
 

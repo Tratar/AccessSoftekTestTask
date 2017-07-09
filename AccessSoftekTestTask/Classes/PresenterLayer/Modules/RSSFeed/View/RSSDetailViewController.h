@@ -1,5 +1,5 @@
 //
-//  RSSFeedDetailViewController.h
+//  RSSDetailViewController.h
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
@@ -10,7 +10,7 @@
 
 @class RSSPresenterEntry;
 
-@interface RSSFeedDetailViewController : UIViewController
+@interface RSSDetailViewController : UIViewController
 
 @property (nonatomic, readonly) RSSPresenterEntry *entry;
 

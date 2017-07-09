@@ -1,17 +1,17 @@
 //
-//  RSSFeedRootViewController.m
+//  RSSRootViewController.m
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
 //  Copyright © 2017 We. All rights reserved.
 //
 
-#import "RSSFeedRootViewController.h"
-#import "RSSFeedMasterViewController.h"
-#import "RSSFeedDetailViewController.h"
+#import "RSSRootViewController.h"
+#import "RSSMasterViewController.h"
+#import "RSSDetailViewController.h"
 #import "RSSPresenter.h"
 
-@implementation RSSFeedRootViewController
+@implementation RSSRootViewController
 
 - (void)viewDidLoad {
     self.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
@@ -53,7 +53,7 @@
 #pragma mark Output UISplitViewControllerDelegate
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[RSSFeedDetailViewController class]] && ([(RSSFeedDetailViewController *)[(UINavigationController *)secondaryViewController topViewController] entry] == nil)) {
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[RSSDetailViewController class]] && ([(RSSDetailViewController *)[(UINavigationController *)secondaryViewController topViewController] entry] == nil)) {
         // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
         return YES;
     } else {

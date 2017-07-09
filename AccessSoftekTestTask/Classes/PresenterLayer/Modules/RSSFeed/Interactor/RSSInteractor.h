@@ -1,5 +1,5 @@
 //
-//  RSSFeedInteractor.h
+//  RSSInteractor.h
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @class RSSPresenterFeed;
-@class FeedAPIService;
+@class RSSService;
 @class RSSObjectsMapper;
 
-@interface RSSFeedInteractor : NSObject
+@interface RSSInteractor : NSObject
 
-@property (nonatomic, strong) FeedAPIService *feedAPIService;
+@property (nonatomic, strong) RSSService *rssService;
 @property (nonatomic, strong) RSSObjectsMapper *objectsMapper;
 
 - (NSURLSessionTask *)getFeed:(void(^)(RSSPresenterFeed *, NSError *))callback;

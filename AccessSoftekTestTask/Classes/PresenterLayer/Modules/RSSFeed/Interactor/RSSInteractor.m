@@ -6,14 +6,14 @@
 //  Copyright © 2017 We. All rights reserved.
 //
 
-#import "RSSFeedInteractor.h"
-#import "FeedAPIService.h"
+#import "RSSInteractor.h"
+#import "RSSService.h"
 #import "RSSObjectsMapper.h"
 
-@implementation RSSFeedInteractor
+@implementation RSSInteractor
 
 - (NSURLSessionTask *)getFeed:(void(^)(RSSPresenterFeed *, NSError *))callback {
-    return [self.feedAPIService getAppleFeed:^(RSSFeed *feed, NSError *error) {
+    return [self.rssService getAppleFeed:^(RSSFeed *feed, NSError *error) {
         if (feed != nil && error == nil) {
             callback([self.objectsMapper mapFeed:feed], error);
         } else {
@@ -23,7 +23,7 @@
 }
 
 - (void)dealloc {
-    self.feedAPIService = nil;
+    self.rssService = nil;
     self.objectsMapper = nil;
     
     [super dealloc];

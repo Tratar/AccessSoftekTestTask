@@ -6,20 +6,20 @@
 //  Copyright © 2017 We. All rights reserved.
 //
 
-#import "RSSFeedRouter.h"
-#import "RSSFeedRootViewController.h"
-#import "RSSFeedMasterViewController.h"
-#import "RSSFeedDetailViewController.h"
+#import "RSSRouter.h"
+#import "RSSRootViewController.h"
+#import "RSSMasterViewController.h"
+#import "RSSDetailViewController.h"
 #import "RSSPresenter.h"
 #import "RSSPresenterState.h"
 
-@implementation RSSFeedRouter
+@implementation RSSRouter
 
 - (void)presentRSSFeed {
-    RSSFeedRootViewController *root = [[RSSFeedRootViewController new] autorelease];
+    RSSRootViewController *root = [[RSSRootViewController new] autorelease];
     
-    RSSFeedMasterViewController *master = [[RSSFeedMasterViewController new] autorelease];
-    RSSFeedDetailViewController *detail = [[RSSFeedDetailViewController new] autorelease];
+    RSSMasterViewController *master = [[RSSMasterViewController new] autorelease];
+    RSSDetailViewController *detail = [[RSSDetailViewController new] autorelease];
     
     UINavigationController *rootNav = [[[UINavigationController alloc] initWithRootViewController:master] autorelease];
     UINavigationController *detailNav = [[[UINavigationController alloc] initWithRootViewController:detail] autorelease];

@@ -1,5 +1,5 @@
 //
-//  FeedAPIService.h
+//  RSSService.h
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class RSSFeed;
 @class Requester;
-@class FeedParser;
+@class RSSFeed;
+@class RSSParser;
 
-@interface FeedAPIService : NSObject
+@interface RSSService : NSObject
 
 @property (nonatomic, strong) Requester *requester;
-@property (nonatomic, strong) FeedParser *parser;
+@property (nonatomic, strong) RSSParser *parser;
 
 - (NSURLSessionTask *)getAppleFeed:(void(^)(RSSFeed *, NSError *))callback;
 

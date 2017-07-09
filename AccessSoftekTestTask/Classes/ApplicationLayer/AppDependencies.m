@@ -7,45 +7,48 @@
 //
 
 #import "AppDependencies.h"
-#import "RSSFeedRouter.h"
-#import "RSSFeedInteractor.h"
-#import "FeedAPIService.h"
+
 #import "Requester.h"
-#import "FeedParser.h"
+
+#import "RSSRouter.h"
+#import "RSSInteractor.h"
+#import "RSSService.h"
+#import "RSSParser.h"
 #import "RSSObjectsMapper.h"
 
 @interface AppDependencies()
 
-@property (nonatomic, readwrite) RSSFeedRouter *feedRouter;
+@property (nonatomic, readwrite) RSSRouter *rssRouter;
 
 @end
 
 @implementation AppDependencies
 
 - (void)configureWithWindow:(UIWindow *)window {
-    FeedAPIService *feedAPIService = [[FeedAPIService new] autorelease];
     Requester *requester = [[Requester new] autorelease];
-    FeedParser *feedParser = [[FeedParser new] autorelease];
     
-    RSSFeedRouter *feedRouter = [[RSSFeedRouter new] autorelease];
-    RSSFeedInteractor *feedInteractor = [[RSSFeedInteractor new] autorelease];
+    RSSService *rssService = [[RSSService new] autorelease];
+    RSSParser *rssParser = [[RSSParser new] autorelease];
     
-    RSSObjectsMapper *objectsMapper = [[RSSObjectsMapper new] autorelease];
+    RSSRouter *rssRouter = [[RSSRouter new] autorelease];
+    RSSInteractor *rssInteractor = [[RSSInteractor new] autorelease];
     
-    feedAPIService.requester = requester;
-    feedAPIService.parser = feedParser;
+    RSSObjectsMapper *rssObjectsMapper = [[RSSObjectsMapper new] autorelease];
     
-    feedInteractor.feedAPIService = feedAPIService;
-    feedInteractor.objectsMapper = objectsMapper;
+    rssService.requester = requester;
+    rssService.parser = rssParser;
     
-    feedRouter.interactor = feedInteractor;
-    feedRouter.window = window;
+    rssInteractor.rssService = rssService;
+    rssInteractor.objectsMapper = rssObjectsMapper;
     
-    self.feedRouter = feedRouter;
+    rssRouter.interactor = rssInteractor;
+    rssRouter.window = window;
+    
+    self.rssRouter = rssRouter;
 }
 
 - (void)dealloc {
-    self.feedRouter = nil;
+    self.rssRouter = nil;
     
     [super dealloc];
 }

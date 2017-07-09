@@ -1,5 +1,5 @@
 //
-//  RSSFeedMasterViewController.h
+//  RSSMasterViewController.h
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
@@ -12,11 +12,11 @@
 @class RSSPresenterFeed;
 @class RSSPresenterEntry;
 
-@class RSSFeedRootViewController;
+@class RSSRootViewController;
 
-@interface RSSFeedMasterViewController : UIViewController
+@interface RSSMasterViewController : UIViewController
 
-@property (nonatomic, assign) RSSFeedRootViewController *rootViewController;
+@property (nonatomic, assign) RSSRootViewController *rootViewController;
 
 #pragma mark Input
 

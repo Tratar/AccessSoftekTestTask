@@ -12,13 +12,13 @@
 @class RSSPresenterFeed;
 @class RSSPresenterEntry;
 
-@class RSSFeedMasterViewController;
-@class RSSFeedDetailViewController;
+@class RSSMasterViewController;
+@class RSSDetailViewController;
 
-@interface RSSFeedRootViewController : UISplitViewController<UISplitViewControllerDelegate>
+@interface RSSRootViewController : UISplitViewController<UISplitViewControllerDelegate>
 
-@property (nonatomic, strong) RSSFeedMasterViewController *master;
-@property (nonatomic, strong) RSSFeedDetailViewController *detail;
+@property (nonatomic, strong) RSSMasterViewController *master;
+@property (nonatomic, strong) RSSDetailViewController *detail;
 
 @property (nonatomic, strong) RSSPresenter *presenter;
 

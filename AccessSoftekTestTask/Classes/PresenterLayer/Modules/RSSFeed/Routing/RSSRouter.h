@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class RSSFeedInteractor;
+@class RSSInteractor;
 
-@interface RSSFeedRouter : NSObject
+@interface RSSRouter : NSObject
 
 @property (nonatomic, strong) UIWindow *window;
-@property (nonatomic, strong) RSSFeedInteractor *interactor;
+@property (nonatomic, strong) RSSInteractor *interactor;
 
 - (void)presentRSSFeed;
 

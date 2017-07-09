@@ -1,15 +1,15 @@
 //
-//  RSSFeedDetailViewController.m
+//  RSSDetailViewController.m
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
 //  Copyright © 2017 We. All rights reserved.
 //
 
-#import "RSSFeedDetailViewController.h"
+#import "RSSDetailViewController.h"
 #import "RSSPresenterEntry.h"
 
-@interface RSSFeedDetailViewController ()
+@interface RSSDetailViewController ()
 
 @property (nonatomic, readwrite, strong) RSSPresenterEntry *entry;
 @property (nonatomic, strong) UIWebView *webView;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation RSSFeedDetailViewController
+@implementation RSSDetailViewController
 
 - (void)viewDidLoad {
     self.automaticallyAdjustsScrollViewInsets = NO;

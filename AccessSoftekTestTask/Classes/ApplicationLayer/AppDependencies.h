@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class RSSFeedRouter;
+@class RSSRouter;
 
 @interface AppDependencies : NSObject
 
-@property (nonatomic, readonly) RSSFeedRouter *feedRouter;
+@property (nonatomic, readonly) RSSRouter *rssRouter;
 
 - (void)configureWithWindow:(UIWindow *)window;
 

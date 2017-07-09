@@ -10,14 +10,14 @@
 
 @class RSSPresenterState;
 @class RSSPresenterEntry;
-@class RSSFeedInteractor;
-@class RSSFeedRootViewController;
+@class RSSInteractor;
+@class RSSRootViewController;
 
 @interface RSSPresenter : NSObject
 
 @property (nonatomic, strong) RSSPresenterState *state;
-@property (nonatomic, strong) RSSFeedInteractor *interactor;
-@property (nonatomic, strong) RSSFeedRootViewController *rootViewController;
+@property (nonatomic, strong) RSSInteractor *interactor;
+@property (nonatomic, strong) RSSRootViewController *rootViewController;
 
 - (void)requestReloadFeed;
 - (void)requestSelect:(RSSPresenterEntry *)entry;

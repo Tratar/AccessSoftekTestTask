@@ -1,14 +1,14 @@
 //
-//  FeedAPIService.m
+//  RSSService.h
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
 //  Copyright © 2017 We. All rights reserved.
 //
 
-#import "FeedAPIService.h"
 #import "Requester.h"
-#import "FeedParser.h"
+#import "RSSService.h"
+#import "RSSParser.h"
 
 #import "RSSFeed.h"
 #import "RSSEntry.h"
@@ -16,7 +16,7 @@
 NSString *const AppleRSSFeedPath = @"http://images.apple.com/main/rss/hotnews/hotnews.rss";
 NSString *const AppleRSSFeedMethod = @"GET";
 
-@implementation FeedAPIService
+@implementation RSSService
 
 - (NSURLSessionTask *)getAppleFeed:(void(^)(RSSFeed *, NSError *))callback {
     // It's not necessary to handle wrap self into __block variable.

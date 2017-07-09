@@ -1,5 +1,5 @@
 //
-//  FeedParser.h
+//  RSSParser.h
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 09/07/2017.
@@ -10,7 +10,7 @@
 
 @class RSSFeed;
 
-@interface FeedParser : NSObject
+@interface RSSParser : NSObject
 
 - (RSSFeed *)parseData:(NSData *)data error:(NSError **)error;
 

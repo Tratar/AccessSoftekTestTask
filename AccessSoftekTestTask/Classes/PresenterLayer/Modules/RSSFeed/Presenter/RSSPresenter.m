@@ -10,8 +10,8 @@
 #import "RSSPresenterFeed.h"
 #import "RSSPresenterEntry.h"
 #import "RSSPresenterState.h"
-#import "RSSFeedInteractor.h"
-#import "RSSFeedRootViewController.h"
+#import "RSSInteractor.h"
+#import "RSSRootViewController.h"
 
 @implementation RSSPresenter
 

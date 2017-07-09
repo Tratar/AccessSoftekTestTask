@@ -1,12 +1,12 @@
 //
-//  FeedParser.m
+//  RSSParser.m
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 09/07/2017.
 //  Copyright © 2017 We. All rights reserved.
 //
 
-#import "FeedParser.h"
+#import "RSSParser.h"
 #import "RSSEntry.h"
 #import "RSSFeed.h"
 
@@ -16,7 +16,7 @@ NSString *const titleXMLElementName = @"title";
 NSString *const linkXMLElementName = @"link";
 NSString *const descriptionXMLElementName = @"description";
 
-@interface FeedParser() <NSXMLParserDelegate>
+@interface RSSParser() <NSXMLParserDelegate>
 
 @property (nonatomic, strong) NSMutableArray <RSSEntry *> *entries;
 
@@ -32,7 +32,7 @@ NSString *const descriptionXMLElementName = @"description";
 
 @end
 
-@implementation FeedParser
+@implementation RSSParser
 
 - (RSSFeed *)parseData:(NSData *)data error:(NSError **)error {
     NSXMLParser *parser = [[[NSXMLParser alloc] initWithData:data] autorelease];

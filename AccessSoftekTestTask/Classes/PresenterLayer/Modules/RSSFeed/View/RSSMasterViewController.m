@@ -1,26 +1,26 @@
 //
-//  RSSFeedMasterViewController.m
+//  RSSMasterViewController.m
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
 //  Copyright © 2017 We. All rights reserved.
 //
 
-#import "RSSFeedMasterViewController.h"
-#import "RSSFeedRootViewController.h"
+#import "RSSMasterViewController.h"
+#import "RSSRootViewController.h"
 #import "RSSPresenterFeed.h"
 #import "RSSPresenterEntry.h"
 
 NSString *const rssListCellIdentifier = @"rssListCellIdentifier";
 
-@interface RSSFeedMasterViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface RSSMasterViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) RSSPresenterFeed *feed;
 
 @end
 
-@implementation RSSFeedMasterViewController
+@implementation RSSMasterViewController
 
 - (void)viewDidLoad {
     self.tableView = [[UITableView new] autorelease];
@@ -47,7 +47,7 @@ NSString *const rssListCellIdentifier = @"rssListCellIdentifier";
 }
 
 - (void)refresh:(id)sender {
-    [self.rootViewController requestReloadFeed];    
+    [self.rootViewController requestReloadFeed];
 }
 
 - (void)didReceiveMemoryWarning {
