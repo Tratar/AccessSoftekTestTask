@@ -1,5 +1,5 @@
 //
-//  RSSFeedInteractor.m
+//  RSSInteractor.m
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.
@@ -9,6 +9,7 @@
 #import "RSSInteractor.h"
 #import "RSSService.h"
 #import "RSSObjectsMapper.h"
+#import "RSSPresenterFeed.h"
 
 @implementation RSSInteractor
 

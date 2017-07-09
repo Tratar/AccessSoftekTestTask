@@ -29,7 +29,6 @@ NSString *const AppleRSSFeedMethod = @"GET";
             } else {
                 callback(feed, nil);
             }
-            
         } else {
             callback(nil, error);
         }

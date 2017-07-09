@@ -1,5 +1,5 @@
 //
-//  RSSFeedRootViewController.h
+//  RSSRootViewController.h
 //  AccessSoftekTestTask
 //
 //  Created by Michael Belenchenko on 08/07/2017.

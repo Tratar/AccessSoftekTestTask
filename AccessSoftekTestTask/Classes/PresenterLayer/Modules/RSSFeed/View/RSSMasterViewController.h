@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class RSSPresenter;
 @class RSSPresenterFeed;
-@class RSSPresenterEntry;
-
 @class RSSRootViewController;
 
 @interface RSSMasterViewController : UIViewController
